@@ -1,0 +1,122 @@
+$bg-overlay: rgba(255, 255, 255, 0.7);
+$bg-image: url(../images/bg-img.jpg) repeat center fixed;
+$full-height: 100vh;
+$link-space: 50px;
+$common-space: 70px 0;
+
+body,
+html {
+    background-color: aliceblue;
+    scroll-behavior: smooth;
+    text-align: center;
+}
+
+.light-headings {
+    font-weight: lighter;
+    padding-bottom: 40px;
+}
+
+// header navbar
+
+header {
+    li {
+        font-size: 1.2rem;
+
+        &+li {
+            margin-left: $link-space;
+        }
+    }
+}
+
+// landing section
+
+#landing-section {
+    background: $bg-image;
+    height: $full-height;
+    padding-top: 20vh;
+}
+
+.landing-headlines {
+    background-color: $bg-overlay;
+    padding: $common-space;
+    font-family: 'Poppins', sans-serif;
+
+    h1 {
+        font-size: 3.5rem;
+        line-height: 5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}
+
+.landing-button {
+    margin-top: 50px;
+
+    .start-button {
+        padding: 15px;
+        font-size: 1.5rem;
+    }
+}
+
+// showcase section
+
+#showcase {
+    padding: $common-space;
+}
+
+.carousel-container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding-bottom: 100px;
+
+    .carousel-shadow {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+
+// pricing section
+
+#pricing {
+    background: $bg-image;
+    padding: $common-space;
+}
+
+.pricing-content {
+    background-color: $bg-overlay;
+    padding: 50px;
+
+    .card-margin {
+        margin-bottom: 30px;
+    }
+
+}
+
+// footer contact section
+
+.footer-container {
+    padding: 150px 0 0;
+
+    .social-icons {
+        margin: $common-space;
+
+        a+a {
+            margin-left: $link-space;
+        }
+    }
+
+    .credits {
+        margin: $common-space;
+    }
+}
+
+// media queries
+
+@media (max-width: 1140px) {
+    header {
+        text-align: left;
+
+        li+li {
+            margin-left: 0;
+        }
+    }
+}
